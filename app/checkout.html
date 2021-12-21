@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" media="all" href="./libs/swiper.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body class="checkout-page">
+<header class="checkout-header">
+    <div class="container">
+        <div class="checkout-header__cont">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo-mob.svg" alt="">
+                </a>
+            </div>
+            <div class="header-phones">
+                <a href="#"><img src="./img/ic-phone.svg" alt="">0 800 220 991</a>
+                <div class="phones-sub">
+                    <div class="single-phone">
+                        <span>Николаев</span>
+                        <a href="">+38 (068) 583 11 55</a>
+                    </div>
+                    <div class="single-phone">
+                        <span>Одесса</span>
+                        <a href="">+38 (068) 583 11 55</a>
+                    </div>
+                    <div class="single-phone">
+                        <span>Киев</span>
+                        <a href="">+38 (050) 819 71 64</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <section class="checkout has-shadow">
+        <div class="container">
+            <div class="checkout__container">
+                <p class="contacts-title">
+                    Оформление заказа
+                </p>
+                <div class="checkout-content">
+                    <div class="left">
+                        <div class="checkout-step">
+                            <div class="checkout-head">
+                                <p>Ваши данные</p>
+                                <a href="#">Редактировать личные данные</a>
+                            </div>
+                            <div class="checkout-form">
+
+                                <div class="form">
+                                    <form action="">
+
+                                        <div class="checkboxes">
+                                            <div class="check-cont">
+                                                <label for="chek">
+                                                    <input type="radio" id="chek" name="check">
+                                                    <span>Я новый клиент</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek2">
+                                                    <input type="radio" id="chek2" name="check" checked>
+                                                    <span>Я постоянный клиент</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="input-cont">
+                                            <label for="">Имя</label>
+                                            <input type="text" placeholder="Имя" value="Константин">
+                                        </div>
+                                        <div class="input-cont">
+                                            <label for="">Фамилия</label>
+                                            <input type="text" placeholder="Фамилия" value="Ткачук">
+                                        </div>
+                                        <div class="input-cont">
+                                            <label for="">E-mail</label>
+                                            <input type="text" placeholder="Email" value="konstantin.ua@gmail.com">
+                                        </div>
+                                        <div class="input-cont">
+                                            <label for="">Телефон</label>
+                                            <input type="text" class="phone-number" value="97 541 02 12"
+                                                   placeholder="+38 (__) ___-__-__">
+                                        </div>
+
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="checkout-step">
+                            <div class="checkout-head">
+                                <p>Доставка</p>
+                            </div>
+                            <div class="checkout-form">
+
+                                <div class="form">
+                                    <form action="">
+
+                                        <div class="checkboxes">
+                                            <div class="check-cont">
+                                                <label for="chek21">
+                                                    <input type="checkbox" id="chek21" name="check">
+                                                    <span>Курьер по адресу</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek22">
+                                                    <input type="checkbox" id="chek22" name="check" checked>
+                                                    <span>Курьер Новой Почты</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek23">
+                                                    <input type="checkbox" id="chek23" name="check">
+                                                    <span>Новой Почтой</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek24">
+                                                    <input type="checkbox" id="chek24" name="check">
+                                                    <span>Самовывоз из наших магазинов</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="double-inp">
+                                            <div class="input-cont">
+                                                <label for="">Выберите город</label>
+                                                <select name="" id="">
+                                                    <option value="" selected>Киев</option>
+                                                    <option value="">Киев2</option>
+                                                </select></div>
+                                            <div class="input-cont">
+                                                <label for="">Выберите отделение</label>
+                                                <select name="" id="">
+                                                    <option value="" selected>Отделение № 1 Улица Пироговский...
+                                                    </option>
+                                                    <option value="">Отделение № 2 Улица Пироговский...</option>
+                                                </select></div>
+                                        </div>
+
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="checkout-step">
+                            <div class="checkout-head">
+                                <p> Оплата</p>
+                            </div>
+                            <div class="checkout-form">
+
+                                <div class="form">
+                                    <form action="">
+
+                                        <div class="checkboxes">
+                                            <div class="check-cont">
+                                                <label for="chek31">
+                                                    <input type="checkbox" id="chek31" name="check">
+                                                    <span>Наличными курьеру</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek32">
+                                                    <input type="checkbox" id="chek32" name="check">
+                                                    <span>Наличными в магазине (при самовывозе)</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek33">
+                                                    <input type="checkbox" id="chek33" name="check" checked>
+                                                    <span>Наложенный платеж</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek34">
+                                                    <input type="checkbox" id="chek34" name="check">
+                                                    <span>Картой в магазине (при самовывозе)</span>
+                                                </label>
+
+                                            </div>
+                                            <div class="check-cont">
+                                                <label for="chek35">
+                                                    <input type="checkbox" id="chek35" name="check">
+                                                    <span>Картой онлайн</span>
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="right">
+
+                        <div class="checkout-info">
+                            <div class="checkout-info__content">
+                                <div class="checkout-head">
+                                    <p>Ваш заказ</p>
+                                    <a href="#">Редактировать заказ</a>
+                                </div>
+                                <div class="cart-table">
+                                    <div class="cart-line">
+                                        <div class="cart-i">
+                                            <img src="../img/pd-1.png" alt="">
+                                        </div>
+                                        <div class="cart-t">
+                                            <span>Артикул: BO161023</span>
+                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                            <p class="price">
+                                                12 грн/ШТ
+                                            </p>
+                                        </div>
+                                        <div class="cart-q">
+                                            <p>6 шт</p>
+                                        </div>
+                                        <div class="cart-p">
+                                            <p>72 грн</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cart-line">
+                                        <div class="cart-i">
+                                            <img src="../img/pd-1.png" alt="">
+                                        </div>
+                                        <div class="cart-t">
+                                            <span>Артикул: BO161023</span>
+                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                            <p class="price">
+                                                12 грн/ШТ
+                                            </p>
+                                        </div>
+                                        <div class="cart-q">
+                                            <p>6 шт</p>
+                                        </div>
+                                        <div class="cart-p">
+                                            <p>72 грн</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cart-line">
+                                        <div class="cart-i">
+                                            <img src="../img/pd-1.png" alt="">
+                                        </div>
+                                        <div class="cart-t">
+                                            <span>Артикул: BO161023</span>
+                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                            <p class="price">
+                                                12 грн/ШТ
+                                            </p>
+                                        </div>
+                                        <div class="cart-q">
+                                            <p>6 шт</p>
+                                        </div>
+                                        <div class="cart-p">
+                                            <p>10272 грн</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cart-line">
+                                        <div class="cart-i">
+                                            <img src="../img/pd-1.png" alt="">
+                                        </div>
+                                        <div class="cart-t">
+                                            <span>Артикул: BO161023</span>
+                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                            <p class="price">
+                                                12 грн/ШТ
+                                            </p>
+                                        </div>
+                                        <div class="cart-q">
+                                            <p>6 шт</p>
+                                        </div>
+                                        <div class="cart-p">
+                                            <p>72 грн</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cart-line">
+                                        <div class="cart-i">
+                                            <img src="../img/pd-1.png" alt="">
+                                        </div>
+                                        <div class="cart-t">
+                                            <span>Артикул: BO161023</span>
+                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                            <p class="price">
+                                                12 грн/ШТ
+                                            </p>
+                                        </div>
+                                        <div class="cart-q">
+                                            <p>6 шт</p>
+                                        </div>
+                                        <div class="cart-p">
+                                            <p>72 грн</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout-footer">
+                                <div class="checkout-footer__list">
+                                    <div class="char">
+                                        <div class="line">
+                                            <p>36 товаров на сумму:</p>
+                                            <span>2 800 грн</span>
+                                        </div>
+                                        <div class="line">
+                                            <p>Стоимость доставки:</p>
+                                            <span>65 грн</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="checkout-footer__total">
+                                    <p>Итого:<strong>32 800 грн</strong></p>
+                                    <button class="btn btn--red" disabled>
+                                        Оформить заказ
+
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer footer--checkout">
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__container">
+                <p class="copyr">2021 © Все права защищены</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+//= details/scripts.html
+
+</body>
+</html>

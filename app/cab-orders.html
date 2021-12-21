@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" media="all" href="./libs/swiper.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+//= details/header.html
+
+
+<main>
+    <section class="profile">
+        <div class="container">
+            <div class="profile__container">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Личный кабинет</a></li>
+                        <li><span>История заказов</span></li>
+                    </ul>
+                </div>
+                <div class="cabinet">
+                    <div class="cabinet-nav">
+                        <div class="cabinet-open">
+                            <div class="img">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="cabinet-name">
+                            <div class="img-upload">
+                                <div class="img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="upl-input">
+                                    <label for="upl-img">
+                                        <input type="file" name="upl-img" id="upl-img">
+                                        <span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="name">
+                                Константин Ткачук
+                            </p>
+                        </div>
+                        <div class="cabinet-links">
+                            <ul>
+                                <li><a href="#">Профиль</a></li>
+                                <li><span>История заказов</span></li>
+                                <li><a href="#">Избранное</a></li>
+                                <li><a href="">Мои отзывы</a></li>
+                            </ul>
+                            <a href="#" class="logout">Выйти</a>
+                        </div>
+
+                    </div>
+                    <div class="cabinet-cont">
+                        <div class="cabinet-head">
+                            <p class="cabinet-title">
+                                История заказов
+                            </p>
+                            <div class="filter-control">
+                                <div class="control-amount">
+                                    <p>Показывать на странице:</p>
+                                    <select name="" id="">
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15" selected>15</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </div>
+                                <div class="control-sort">
+                                    <p>Сортировка:</p>
+                                    <select name="" id="">
+                                        <option value="5" selected>От самых дешевых</option>
+                                        <option value="10">От самых дорогих</option>
+                                        <option value="15">По популярности</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="cabinet-orders">
+                            <div class="cabinet-orders__head">
+                                <div class="item">
+                                    НОМЕР ЗАКАЗА
+                                </div>
+                                <div class="item">
+                                    Дата
+                                </div>
+                                <div class="item">
+                                    Статус
+                                </div>
+                                <div class="item">
+                                    Количество
+                                </div>
+                                <div class="item">
+                                    Общая сумма
+                                </div>
+                            </div>
+
+                            <div class="cabinet-orders__table">
+                                <div class="orders-item open">
+                                    <div class="orders-item__line">
+                                        <div class="item">26632211</div>
+                                        <div class="item">19.08.2021</div>
+                                        <div class="item status work">
+                                            В обработке
+                                        </div>
+                                        <div class="item">4</div>
+                                        <div class="item price">2 800 грн</div>
+                                        <div class="item-show">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                                <path d="M1.3024 1.4502L4.2031 4.3509L7.10381 1.4502L7.99902 2.34538L4.2031 6.1413L0.407187 2.34538L1.3024 1.4502Z"
+                                                      />
+
+
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="orders-item__table">
+                                        <div class="checkout-info">
+                                            <div class="checkout-info__content">
+
+                                                <div class="cart-table">
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>7223 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-footer">
+                                                <div class="checkout-footer__list">
+                                                    <div class="char">
+                                                        <div class="line">
+                                                            <p>Способ доставки</p>
+                                                            <span>Новая почта</span>
+                                                        </div>
+                                                        <div class="line">
+                                                            <p>Способ оплаты</p>
+                                                            <span>Наложенный платеж</span>
+                                                        </div>
+                                                        <div class="line">
+                                                            <p>Адрес доставки</p>
+                                                            <span>г. Киев, отделение №87</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-footer__total">
+                                                    <p>Итого:<strong>32 800 грн</strong></p>
+                                                    <button class="btn btn--red" >
+                                                        Повторить заказ
+                                                    </button>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="orders-item ">
+                                    <div class="orders-item__line">
+                                        <div class="item">26632211</div>
+                                        <div class="item">19.08.2021</div>
+                                        <div class="item status done">
+                                            Выполнен
+                                        </div>
+                                        <div class="item">4</div>
+                                        <div class="item price">2 800 грн</div>
+                                        <div class="item-show">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                                <path d="M1.3024 1.4502L4.2031 4.3509L7.10381 1.4502L7.99902 2.34538L4.2031 6.1413L0.407187 2.34538L1.3024 1.4502Z"
+                                                />
+
+
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="orders-item__table">
+                                        <div class="checkout-info">
+                                            <div class="checkout-info__content">
+
+                                                <div class="cart-table">
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-footer">
+                                                <div class="checkout-footer__list">
+                                                    <div class="char">
+                                                        <div class="line">
+                                                            <p>Способ доставки</p>
+                                                            <span>Новая почта</span>
+                                                        </div>
+                                                        <div class="line">
+                                                            <p>Способ оплаты</p>
+                                                            <span>Наложенный платеж</span>
+                                                        </div>
+                                                        <div class="line">
+                                                            <p>Адрес доставки</p>
+                                                            <span>г. Киев, отделение №87</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-footer__total">
+                                                    <p>Итого:<strong>32 800 грн</strong></p>
+                                                    <button class="btn btn--red" >
+                                                        Повторить заказ
+                                                    </button>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="orders-item ">
+                                    <div class="orders-item__line">
+                                        <div class="item">26632211</div>
+                                        <div class="item">19.08.2021</div>
+                                        <div class="item status cancel">
+                                            Отменен
+                                        </div>
+                                        <div class="item">4</div>
+                                        <div class="item price">2 800 грн</div>
+                                        <div class="item-show">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                                <path d="M1.3024 1.4502L4.2031 4.3509L7.10381 1.4502L7.99902 2.34538L4.2031 6.1413L0.407187 2.34538L1.3024 1.4502Z"
+                                                />
+
+
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="orders-item__table">
+                                        <div class="checkout-info">
+                                            <div class="checkout-info__content">
+
+                                                <div class="cart-table">
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="cart-line">
+                                                        <div class="cart-i">
+                                                            <img src="../img/pd-1.png" alt="">
+                                                        </div>
+                                                        <div class="cart-t">
+                                                            <span>Артикул: BO161023</span>
+                                                            <p>Шоколадный молочный батончик с апельсиновой начинкой TidBit</p>
+                                                            <p class="price">
+                                                                12 грн/ШТ
+                                                            </p>
+                                                        </div>
+                                                        <div class="cart-ar">
+                                                            <span>Артикул: BO161023</span>
+                                                        </div>
+                                                        <div class="cart-q">
+                                                            <p>6 шт</p>
+                                                        </div>
+                                                        <div class="cart-p">
+                                                            <p>72 грн</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-footer">
+                                                <div class="checkout-footer__list">
+                                                    <div class="char">
+                                                        <div class="line">
+                                                            <p>Способ доставки</p>
+                                                            <span>Новая почта</span>
+                                                        </div>
+                                                        <div class="line">
+                                                            <p>Способ оплаты</p>
+                                                            <span>Наложенный платеж</span>
+                                                        </div>
+                                                        <div class="line">
+                                                            <p>Адрес доставки</p>
+                                                            <span>г. Киев, отделение №87</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="checkout-footer__total">
+                                                    <p>Итого:<strong>32 800 грн</strong></p>
+                                                    <button class="btn btn--red" >
+                                                        Повторить заказ
+                                                    </button>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href="#" class="prev"></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><span class="current">2</span></li>
+                                    <li><span>...</span></li>
+                                    <li><a href="#">4</a></li>
+
+                                    <li><a href="#" class="next"></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+</main>
+//= details/footer.html
+
+
+//= details/scripts.html
+
+</body>
+</html>
