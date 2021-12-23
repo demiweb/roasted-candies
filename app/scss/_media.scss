@@ -881,7 +881,7 @@
     margin-top: 28px;
   }
   .shares-page {
-    margin: 30px 0 10px;
+    margin: 20px 0 10px;
   }
   .shares__tabs {
     flex-wrap: wrap;
@@ -1035,6 +1035,9 @@
   }
   main {
     margin-top: 10px;
+    & > .hero {
+      margin-top: -10px;
+    }
   }
   .home-slider {
     height: 340px;
