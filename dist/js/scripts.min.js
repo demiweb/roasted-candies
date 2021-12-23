@@ -949,3 +949,122 @@ function goToRevs() {
     }
 }
 goToRevs();
+
+//map mag
+let allMapsDots = [...document.querySelectorAll('.single-mag')];
+let addressCoord = [];
+function goToDotMap() {
+    allMapsDots = [...document.querySelectorAll('.single-loc')];
+    allMapsDots.forEach((ot) => {
+        let aLinkMap = ot.querySelector('.single-mag');
+        aLinkMap.addEventListener('click', (e) => {
+            // if (window.innerWidth > 640) {
+            e.preventDefault();
+            // }
+            document.getElementById("mapid").scrollIntoView();
+
+            let xCoord1 = Number(ot.dataset.locationX);
+            let yCoord1 = Number(ot.dataset.locationY);
+            map.setView([xCoord1, yCoord1], 18);
+            map.panTo(new L.LatLng(xCoord1, yCoord1));
+            markersPos[i].openPopup();
+        })
+    })
+}
+
+function ifHaveDots(x='49.27585599310113',y='31.94249562538696',zoom=6) {
+    if (!allMapsDots.length) {
+
+    } else {
+        addressCoord = [];
+
+        addressCoord=addressCoord2;
+        console.log(addressCoord);
+        createMapBuy(x,y,zoom);
+    }
+}
+let changeItems = document.querySelector('.select-buy__container');
+function ifChangedItemsConsist() {
+    if (!changeItems) {
+
+    } else {
+        changeItems.onchange =  function()  {
+            console.log('changed');
+            ifHaveDots();
+            goToDotMap();
+        }
+        changeItems.addEventListener('change', () => {
+            console.log('changed');
+            ifHaveDots();
+            goToDotMap();
+        });
+    }
+}
+ifChangedItemsConsist();
+
+
+let numberOfChanges = 0;
+
+ifHaveDots();
+
+function createMapBuy(x,y,zoom) {
+    function createNewMap() {
+        let divMap = document.createElement('div');
+        divMap.id = 'mapid';
+        document.querySelector('.map-container').appendChild(divMap);
+    }
+    // console.log(addressCoord);
+    let mapDiv = document.querySelector('#mapid');
+
+    if (!mapDiv) {
+        createNewMap();
+    } else {
+        mapDiv.remove();
+        createNewMap();
+    }
+
+    var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+        }),
+
+        latlng = L.latLng(x,y );
+
+    var map = L.map('mapid', {center: latlng, zoom: zoom, layers: [tiles]});
+
+    var markers = L.markerClusterGroup();
+    let markersPos = [];
+
+    for (var i = 0; i < addressCoord.length; i++) {
+        var a = addressCoord[i];
+        var title = a[2];
+        var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
+        marker.bindPopup(title);
+        markers.addLayer(marker);
+        markersPos.push(marker);
+    }
+
+    map.addLayer(markers);
+    allMapsDots = [...document.querySelectorAll('.single-loc')];
+    allMapsDots.forEach((ot, i) => {
+        let aLinkMap = ot.querySelector('.single-mag');
+        aLinkMap.addEventListener('click', (e) => {
+            e.preventDefault();
+            $('html,body').animate({ scrollTop: $('#mapid').offset().top - 100 }, 600);
+
+
+
+            // let idMap = document.getElementById('mapid').getBoundingClientRect().top;
+
+
+            // e.preventDefault();
+            let xCoord1 = Number(ot.dataset.locationX);
+            let yCoord1 = Number(ot.dataset.locationY);
+
+            map.setView([xCoord1, yCoord1], 18);
+            map.panTo(new L.LatLng(xCoord1, yCoord1));
+            markersPos[i].openPopup();
+        })
+    })
+}
+//map mag

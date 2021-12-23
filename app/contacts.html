@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
     <link rel="stylesheet" media="all" href="./libs/swiper.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
@@ -134,7 +143,465 @@
                 <p class="contacts-title">
                     Выберите ближайший магазин
                 </p>
+                <script>
+                    // var ajaxurl = 'https://mario.ua/wp-admin/admin-ajax.php';
+                    addressCoord2=[];
+
+
+                    addressCoord2.push([50.01218666117535, 36.216862739027555, "<strong>Keramis</strong><br>+38(057) 76 14 410<br>Харківська область,вулиця Клочківська, 159<a href='https://www.keramis.com.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.02068043436559, 36.29196248506361, "<strong>Keramis</strong><br>+38(057) 76 14 410<br>Харківська область,вулиця Шевченка 327<a href='https://www.keramis.com.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.0571397263636, 36.20255898605937, "<strong>Сантехдім</strong><br>+38(057) 75 12 817<br>Харківська область,пр-кт.Перемоги 58-а<a href='https://www.santeh-dom.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.99876730901558, 36.223976093157766, "<strong>ТОВ Стройіндустрія Східбуд НВК ТОВ</strong><br><br>Харківська область,вулиця Клочківська, 55<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.01278422661013, 36.25000276971809, "<strong>Алвис Беседина В.М. ФОП</strong><br><br>Харківська область,вулиця Весніна, 12<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.009844795392034, 36.21626519113736, "<strong>Santorin</strong><br>+38(057) 70 15 044<br>Харківська область,вулиця Сухумська, 24<a href='http://santorin.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.98893093456287, 36.26858474088105, "<strong>Santorin</strong><br>+38(057) 70 15 044<br>Харківська область,пр-кт. Московський, 137<a href='http://santorin.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.00061876746919, 36.21965860884818, "<strong>Водяний</strong><br>+38(057) 71 59 470<br>Харківська область,вулиця Клочківська, 67<a href='https://vodyanoy.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.99008363311963, 36.26160754088102, "<strong>Водяний</strong><br>+38(057) 71 59 470<br>Харківська область,пр-кт.Московський 90в<a href='https://vodyanoy.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.98302535911187, 36.27771925437186, "<strong>Астер-М</strong><br>+38(080) 04 01 044<br>Харківська область,пр-кт. Московський, 118<a href='https://aster.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.99016880865325, 36.25333171204478, "<strong>Стиль Кераміки</strong><br>+38(050) 40 05 540<br>Харківська область,ТЦ PREMIUM, пр-кт. Московський, 48, 2 этаж<a href='https://stylecer.com.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.96646150664033, 36.32260437134004, "<strong>Салон Керамічної Плитки</strong><br>+38(057) 71 99 777<br>Харківська область,пр-кт. Московський, 257-А<a href='https://skp.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.986473023949394, 36.202730509959814, "<strong>Салон Керамічної Плитки</strong><br>+38(057) 71 99 770<br>Харківська область,вулиця Полтавський Шлях, 79<a href='https://skp.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.03493720160956, 36.21977935043464, "<strong>Салон Керамічної Плитки</strong><br>+38(057) 71 99 707<br>Харківська область,пр-кт. Науки, 43<a href='https://skp.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.028645093773925, 36.325931800178644, "<strong>Салон Керамічної Плитки</strong><br>+38(057) 71 99 707<br>Харківська область,вулиця Героїв праці, 3<a href='https://skp.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.98230763227135, 36.278835330267185, "<strong>Атлант</strong><br>+38(068) 50 58 724<br>Харківська область,пр-кт. Московський, 118<a href='https://atlant-shop.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.999189494593196, 36.2560547794385, "<strong>Сахара</strong><br>+38(057)75 76 000<br>Харківська область,вулиця Шевченка 24<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.997387149782185, 36.27311168298314, "<strong>СантехХаус</strong><br>+38(066)95 55 240<br>Харківська область,вулиця Юрія Лавріненка 15<a href='https://www.santehnika.kh.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.01051360929333, 36.24253435667662, "<strong>Keram Idea</strong><br>+380(99)07 02 888<br>Харківська область,вулиця Мироносецька 79<a href='https://keram-ideya.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.00232610019545, 36.30212401389934, "<strong>Мойкин Дом</strong><br>+38(098)15 42 589<br>Харківська область,вулиця Амурська 26<a href='https://moykindom.com.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([50.91556768371714, 34.794257279017515, "<strong>Віста</strong><br>+38(050) 30 79 129<br>Сумська область,вулиця Ярослава Мудрого, 9 <a href='https://vista.ua//'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.91452270857345, 34.79258131392791, "<strong>Профі</strong><br>+38(095) 61 68 872<br>Сумська область,вулиця Ярослава Мудрого, 20<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.90310251503294, 34.81460705440071, "<strong> Аквастрой</strong><br>+38(050) 63 10 542<br>Сумська область,вулиця Харківська 23<a href='https://aquastroysumy.uaprom.net/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.930581419185806, 34.812605235859564, "<strong>Дюйм</strong><br>+38(099) 34 45 720<br>Сумська область, вулиця Тополянська, 12<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.92026381737282, 34.828875611688986, "<strong>КерамаХіт</strong><br>+38(099) 53 82 421<br>Сумська область,вулиця Заливна, 39<a href='https://ceramahit.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.89460595653628, 34.78142412927265, "<strong>4Room</strong><br>+38(066) 44 49 949<br>Сумська область,вулиця 20 років Перемоги, 7/1<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.90600715949627, 34.798086373454446, "<strong>Буль-Буль</strong><br>+380975319633<br>Сумська область,вулиця Герасима Кондратьєва, 6<a href='http://tiles.tilda.ws/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.896138156341856, 34.83586892876094, "<strong>Салон Керамічної Плитки</strong><br>+38(054) 26 51 007<br>Сумська область,вулиця Харківська, 107<a href='https://skp.ua/ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([47.098495765046145, 37.562784371483424, "<strong>Каскад</strong><br>+38(097) 99 80 808<br>Донецька область,вулиця Торгова, 45<a href='http://www.kaskad.biz.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([47.10355442496358, 37.5430622135271, "<strong>МастерОК</strong><br>+38(097) 91 30 561<br>Донецька область,вулиця Казанцева, 114<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.74188030484352, 37.574658323371395, "<strong>Інтер Буд</strong><br>+38(067) 69 43 190<br>Донецька область,вулиця Олекси Тихого, 10<a href='https://intermebli.business.site/website/intermebli/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.589922589215824, 38.004177669618414, "<strong>Domotronika</strong><br>+38(099)93 32 252<br>Донецька область,вулиця Гагаріна, 1<a href='https://www.domotronika.dn.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.43390570135379, 26.989980344572185, "<strong>АкваСтиль</strong><br>+38(097) 98 11 677<br>Хмельницька область,вулиця Зарічанська, 11А<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.43309087169811, 27.012043498536396, "<strong>Аква-Дім</strong><br>+38(067) 38 03 536<br>Хмельницька область,вулиця Старокостянтинівське шосе, дім № 14/1<a href='http://akvadim.com/index.php'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.26233059449509, 25.952619931045174, "<strong>Формула тепла</strong><br>+38(099)71 12 928<br>Чернівецька область, вулиця Головна, 190-А<a href='https://formulatepla.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.267593122632114, 25.954200440635685, "<strong>Термо техніка</strong><br>+38(050) 68 26 051<br>Чернівецька область,вулиця Чкалова, дім № 13<a href='http://termo-tehnika.com/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.435912316515605, 22.742368674528137, "<strong>Технокарпати</strong><br>+38(097) 50 47 000<br>Закарпатська область,вулиця Кооперативна, 46<a href='https://tehnokarpaty.com.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([50.7543616537872, 25.328537013091903, "<strong>ЄвроДім</strong><br>0332 740 333<br>Волинська область,вулиця Яровиця, 4<a href='http://eurodim.co.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.75117082819349, 25.35619292555959, "<strong>ЄвроКераміка</strong><br>+38(067)97 05 087<br>Волинська область,вулиця Карпенка-Карого,15<a href='http://eurokeramika.com.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.549757508240305, 25.621278285048874, "<strong>Теплопартнер</strong><br>+38(098)70 55 650<br>Тернопільська область,пр-кт. Бандери, 70<a href='http://teplopartner.vaillant.club/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.54302728999408, 25.631539481340297, "<strong>Водолій</strong><br>+38(067)35 04 399<br>Тернопільська область,вулиця Лесі Українки, 39<a href='https://vodolii.business.site/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([50.624814841986115, 26.27148197842775, "<strong>TEPLEX</strong><br>+38(096)07 88 788<br>Рівненська область,вулиця Грушевського, 28<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.61856477541473, 26.22580730515918, "<strong>TEPLEX</strong><br>+38(067)33 57 355<br>Рівненська область,вулиця Петра Могили, 28<a href='https://teplex.ua/ua'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.6299884183607, 26.269809444609464, "<strong>Центр Кераміки</strong><br>+38(097)40 73 718<br>Рівненська область,вулиця Гагаріна, 39б<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.936571942768275, 24.706648052485157, "<strong>Центр Кераміки</strong><br>0342 711 177<br>Івано-Франківська область,вулиця Галицька, 66<a href='Львів'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.902777381574275, 24.704979664121094, "<strong>ТеплоХаус</strong><br>+38(068)77 59 245<br>Івано-Франківська область,вулиця С. Петлюри, 15Б<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.81046382681038, 23.97266302367594, "<strong>Дороге-Дешево</strong><br>+38(067)67 21 682<br>Львівська область,вулиця Щирецька, 36<a href='https://dorogedeshevo.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.862492581399174, 24.037274338741828, "<strong>Агромат</strong><br>0800 303 019  <br>Львівська область,вулиця Городницька, 47<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.8340593614135, 24.026779684763387, "<strong>Агромат</strong><br>0800 303 019<br>Львівська область,вулиця Грабовського, 11<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([46.366726259227235, 30.701830540771155, "<strong>Слон</strong><br>+38(068)99 97 779<br>Одеська область,вулиця Гарман, 1 к. 6, Ліманка<a href='https://11.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.44323121316822, 30.706313559429685, "<strong>Домус Кераміка</strong><br>+38(048)78 00 222<br>Одеська область,вулиця Івана та Юрія Лип, 11<a href='https://domus-ceramika.od.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([46.966092873763095, 31.997918727297794, "<strong>VIP Кераміка</strong><br>+38(051)25 83 002<br>Миколаївська область,пр-кт. Центральний, 93<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.97337361394497, 31.978371383116393, "<strong>Південа карта</strong><br>+38(051)24 71 353<br>Миколаївська область,вулиця Шевченка, 36-26<a href='http://southmap.mk.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.86048451894393, 32.00734505983934, "<strong>Сантехніка</strong><br>+38(067)66 56 632<br>Миколаївська область,вулиця Самойловича, 2а<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.96343335290864, 31.994277710098277, "<strong>Тепло-Люкс</strong><br>+38(096)97 73 754<br>Миколаївська область,вулиця Мала Морська, 39<a href='https://teploluks.business.site/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.94688548188392, 32.06052413095695, "<strong>ГідроМаг</strong><br>+38(093)63 79 047<br>Миколаївська область,вулиця Космонавтів, 88/7а<a href='http://www.gidromag.mk.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.95935507687281, 32.00677643893448, "<strong>Акваресурс</strong><br>+38(067)38 00 866<br>Миколаївська область,вулиця 1-а Слобідська 62-б<a href='https://serviceclub.com.ua/akvaresurs-316-316.html'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.96737990349075, 31.993145140788908, "<strong>Практика</strong><br>+38(063)46 78 121<br>Миколаївська область,вулиця Шнеєрсона, 39<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([46.6336680852527, 32.606812415651085, "<strong>Santekhnyka Plytka</strong><br>+38(067)13 44 044<br>Херсонська область,вулиця Воронцовська, 33<a href='http://svit-keramiki.com.ua/index.php/ru/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.63926027076258, 32.603581684960794, "<strong>Сантехніка та опалення</strong><br><br>Херсонська область,вулиця Робоча 29<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([46.77043502213028, 36.791002723535726, "<strong>Аква-Ера</strong><br>+38(095)25 92 494<br>Запорізька область,вулиця Софіївська, 42<a href='https://akva-era.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.758735479737666, 36.79896258496428, "<strong>Аква-Ера</strong><br>+38(050)93 05 456<br>Запорізька область,вулиця Свободи, 117б<a href='https://akva-era.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.77418902118023, 36.78242914263711, "<strong>Акватерм</strong><br>+38(061)53 27 601<br>Запорізька область,вулиця Волонтерів, 51а<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([47.81542701972803, 35.16171683353734, "<strong>Мойдодыр</strong><br>+38(050)32 11 747<br>Запорізька область,вулиця Крива Бухта, 2б<a href='http://moydodir.com.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([46.86032883860702, 35.37879688496726, "<strong>Ф-ЦЕНТР</strong><br>+38(067)61 18 804<br>Запорізька область,вулиця Героїв Сталінграду, 2<a href='https://fundament.zp.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([46.870181720799835, 35.380568371476464, "<strong>Оселя</strong><br>+38(067)41 83 380<br>Запорізька область,бульвар 30-річчя Перемоги, 1А<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.44338576972071, 34.99797040036015, "<strong>Декор</strong><br>+38(063)87 85 566<br>Дніпропетровська область,вулиця Робітнича 152<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.52231064290318, 35.07997575999858, "<strong>Новий Світ</strong><br>+38(067)67 63 030<br>Дніпропетровська область,пр-кт. ім. Газети Правда 117<a href='https://noviysvit.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.43959211401216, 35.02062654268727, "<strong>Новий Світ</strong><br>+38(067)63 09 559<br>Дніпропетровська область,пр-кт. Богдана Хмельницького 20<a href='https://noviysvit.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.4618850516909, 35.0596622175601, "<strong>Новий Світ</strong><br>+38(067)52 32 249<br>Дніпропетровська область,вулиця Володимира Вернадського 23<a href='https://noviysvit.com.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.53231480868908, 35.084560092946006, "<strong>Дім Кераміки</strong><br>+38(096)68 61 588<br>Дніпровська область,вулиця Паркова, 3<a href='https://domkeramiki.business.site/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([47.90259048227375, 33.419651727325935, "<strong>Мир</strong><br>+38(067)53 93 998<br>Дніпровська область,вулиця Блюхера 5<a href='http://mirceramics.com/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.51566790727584, 34.59173336068226, "<strong>Руді Буд</strong><br>+38(067)61 12 614<br>Дніпровська область,пр-кт. Аношкіна, 24Б<a href='http://www.rudibud.com.ua/ru/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.49619656705622, 35.92965418316231, "<strong>Союз</strong><br>+38(095)91 98 373<br>Дніпровська область,вулиця Дніпровська, 422а<a href='https://instella.ru/enter/35172/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.084200262191565, 33.40786303158194, "<strong>Домовий</strong><br>+38(098)30 88 333<br>Полтавська область,вулиця Лікаря О.Богаєвського, 64<a href='https://www.domovoy.pl.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.07500192408454, 33.417249196391225, "<strong>Керама</strong><br>+38(067)82 89 090<br>Полтавська область,вулиця Троїцька, 78<a href='https://keramaplitka.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.091743443426516, 33.437154371543606, "<strong>Магнитторг</strong><br>+38(098)87 48 259<br>Полтавська область,вулиця Лебедина, 13А<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.59801592257432, 34.50111285244562, "<strong>КРАЙТ</strong><br>+38(095)59 00 044<br>Полтавська область,вулиця Маршала Бірюзова, 51<a href='https://krait.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.599815680508605, 34.5142089985415, "<strong>СантехДеталь</strong><br>+38(099)55 36 688<br>Полтавська область,вулиця Маршала Бірюзова, 35<a href='https://sdplus.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.5971492591359, 34.47475824138037, "<strong>Мінімаксі</strong><br>+38(050)35 60 060<br>Полтавська область,Заводська вулиця, 10<a href='https://minimaxi.pp.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.21172529886624, 28.5201826670931, "<strong>TVD</strong><br>0432 556 654<br>Вінницька область,вулиця Бучми, 126<a href='http://tvd.vn.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.22507289310245, 28.448368691113135, "<strong>ТермоРЕЗЕРВ</strong><br>+38(096)57 46 047<br>Вінницька область,вулиця Родіона Скалецького, 7<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.223256672607185, 28.46018406783931, "<strong>АкваПлюс</strong><br>+38(097)36 65 252<br>Вінницька область,вулиця Князів Коріатовичів, 145<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.22699464501411, 28.4291957562027, "<strong>Агромат</strong><br>0800 303 019<br>Вінницька область,вулиця 600-річчя 17Г<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([50.268951440879206, 28.657198334303896, "<strong>Магія Комфорту</strong><br>0412 445 697<br>Житомирська область, вулиця Покровська, 63<a href='https://magic-comfort.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.26072463966491, 28.702394813907315, "<strong>Ермітаж</strong><br><br>Житомирська область,вулиця Вітрука, 6В<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.26910416788965, 28.666989515761845, "<strong>Комфортний дім плюс</strong><br>+38(093)05 14 348<br>Житомирська область,вулиця Домбровського, 45<a href=''>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([49.42660810976937, 32.09002989246201, "<strong>Сантехстиль</strong><br>+38(068)53 99 279<br>Черкаська область,бульвар Шевченка, 398<a href='http://www.santehstyl.com.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([49.428651840538535, 32.03521377068791, "<strong>Оселя Плюс</strong><br>+38(063)31 79 862<br>Черкаська область,вулиця Хоменка 17<a href='https://oselja-plus.com.ua/'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([48.49809074441457, 32.22233293442795, "<strong>Зодчий</strong><br>0522 301 946<br>Кропивницька область, вулиця Волкова, 13<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.52407739080442, 32.26703242457485, "<strong>Ромб</strong><br>+38(067)52 08 057<br>Кропивницька область,вулиця Василя Нікітіна, 90<a href='https://ibrigadir.com/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([48.502461305648374, 32.23378540592458, "<strong>Спутник</strong><br>0522 358 180<br>Кропивницька область,вулиця Євгена Тельнова, 3\1<a href='http://www.stroygrad.kr.ua/nashi-magaziny/sputnik'>Сайт компанії</a>"]);
+
+
+
+
+
+                    addressCoord2.push([50.550033481248626, 30.23066860252331, "<strong>Анжіо</strong><br>(044) 406-39-08<br>Київська область,вулиця Володимирська 159<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.553614007319545, 30.607282432524094, "<strong>Анжіо</strong><br>+38(098)21 09 854<br>Київська область,вулиця Погребский шлях, 70<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.52524830040476, 30.828382288280437, "<strong>Анжіо</strong><br>(044) 223-97-91<br>Київська область,вулиця Онікієнка Олега (Кутузова), 125<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.40730659492317, 30.376928558093617, "<strong>Анжіо</strong><br>(044) 239-28-88<br>Київська область,вулиця Київська, 57<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.332124197652746, 30.44179271205537, "<strong>Анжіо</strong><br>(044) 451-50-68<br>Київська область,вулиця Шевченка, 114<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.13160942635999, 30.73079608321279, "<strong>Анжіо</strong><br>+38(067)96 23 898<br>Київська область,вулиця Промислова 13<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.392168938641554, 30.605891369729903, "<strong>Анжіо</strong><br>(044) 332-73-21<br>Київська область,Осокорки, ринок Славутич, метро Славутич<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.39009606379518, 30.678026071584053, "<strong>Анжіо</strong><br>+38(093)36 54 806<br>Київська область,вулиця Коцюбинського 39ж<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.39214157884499, 30.605869912057273, "<strong>Анжіо</strong><br>(044) 258-33-55<br>Київська область,вулиця Центральна, 12<a href='https://angio.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.40697298457536, 30.611265423694608, "<strong>Равак</strong><br>(044) 360-52-00<br>Київська область,Дніпровська набережна, 21<a href='https://www.ravak.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.43023906873936, 30.487186939040548, "<strong>Равак</strong><br>(044) 221-40-25<br>Кииївська область,вулиця Кудряшова, 18-а<a href='https://www.ravak.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.5111807260843, 30.449675829260563, "<strong>Равак</strong><br>(044) 365-10-10<br>Київська область,вулиця Вишгородська, 45а/2<a href='https://www.ravak.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.45788122796456, 30.399784404642507, "<strong>Равак</strong><br>(044) 361-22-70<br>Київська область,пр-т. Перемоги, 73/1<a href='https://www.ravak.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.39950686873315, 30.511168377146834, "<strong>Равак</strong><br>(044) 223-00-68<br>Київська область,пр-т. Голосіївський, 68<a href='https://www.ravak.ua/uk/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.47247999852959, 30.350669607602374, "<strong>Коліушко</strong><br><br>Київська область,вулиця Академіка Булаховського, 2/1, павільйон 1<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.39838049975702, 30.391557612057486, "<strong>Ваша Сантехніка</strong><br>+38(067)99 67 402<br>Київська область,вулиця Щаслива, 50<a href='https://vashasantehnika.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.12169544181084, 30.650913769430403, "<strong>Водомет</strong><br>+38(093)19 43 520<br>Київська область,вулиця Піщана, 1<a href='https://vodomet.uaprom.net/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.35948062928836, 30.9411053560056, "<strong>Енкомм</strong><br>+38(095)63 04 848<br>Київська область,вулиця Головатого, 2<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.51692466225338, 30.47623502711144, "<strong>КерамХолл</strong><br>+38(067)00 92 019<br>Київська область,вулиця Полярна, 12<a href='https://keramhall.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.48965974892248, 30.489822894582925, "<strong>КерамХолл</strong><br>+38(067)00 92 019<br>Київська область,проспект Степана Бандери, 17<a href='https://keramhall.com.ua/ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.520467400914214, 30.808572098276354, "<strong>Модифікат</strong><br><br>Київська область,вулиця Магнітогорська, 2а, оф. 465<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.34327176702553, 30.55209769850138, "<strong>Bizzarro Ceramica</strong><br>+38(067)00 92 019<br>Київська область,Столичне шосе, 101<a href='https://bizzarroceramica.com/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.45254700749452, 30.489453941238015, "<strong>Interior LAB</strong><br>+38(067)23 56 758<br>Київська область,вулиця Павлівська, 17<a href=''>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.47300455218461, 30.34960951429847, "<strong>Агромат</strong><br>0800 303 019<br>Київська область,вулиця Академіка Булаховського, 4,<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.381892532609776, 30.44106705778943, "<strong>Агромат</strong><br>0800 303 019<br>Київська область,вулиця Кільцева дорога, 110,<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.39708118592261, 30.62087735409705, "<strong>Агромат</strong><br>0800 303 019<br>Київська область,проспект Миколи Бажана, 1л<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.47247992533009, 30.350695228729897, "<strong>Агромат</strong><br>0800 303 019<br>Київська область,вулиця Академіка Булаховського, 2/1<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+                    addressCoord2.push([50.47278462627519, 30.35329620681721, "<strong>Агромат</strong><br>0800 303 019<br>Київська область,вулиця Акадкміка Булаховського, 2/2<a href='https://shop.agromat.ua/'>Сайт компанії</a>"]);
+
+
+
+                </script>
                 <div class="map-container">
+
 
                 </div>
             </div>
@@ -142,126 +609,127 @@
                 наши филиалы
             </p>
             <div class="map-location">
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="36.216862739027555" data-location-x="50.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>ул. Маршала Говорова, 10/6</p>
-                        <span>Смотреть на карте</span>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
-                <div class="single-loc">
-                    <div class="img">
-                        <img src="./img/loc-cont.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>ул. Пантелеймоновская, 110 / Александровский пр-т "Новый привоз"</p>
-                        <span>Смотреть на карте</span>
-
-                    </div>
-                </div>
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="36.516862739027555" data-location-x="51.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>ул. Маршала Говорова, 10/6</p>
-                        <span>Смотреть на карте</span>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
-                <div class="single-loc">
-                    <div class="img">
-                        <img src="./img/loc-cont.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>ул. Пантелеймоновская, 110 / Александровский пр-т "Новый привоз"</p>
-                        <span>Смотреть на карте</span>
-
-                    </div>
-                </div>
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="34.216862739027555" data-location-x="51.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>ул. Маршала Говорова, 10/6</p>
-                        <span>Смотреть на карте</span>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
-                <div class="single-loc">
-                    <div class="img">
-                        <img src="./img/loc-cont.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>ул. Пантелеймоновская, 110 / Александровский пр-т "Новый привоз"</p>
-                        <span>Смотреть на карте</span>
-
-                    </div>
-                </div>
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="32.216862739027555" data-location-x="49.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>ул. Маршала Говорова, 10/6</p>
-                        <span>Смотреть на карте</span>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
-                <div class="single-loc">
-                    <div class="img">
-                        <img src="./img/loc-cont.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>ул. Пантелеймоновская, 110 / Александровский пр-т "Новый привоз"</p>
-                        <span>Смотреть на карте</span>
-
-                    </div>
-                </div>
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="36.216862739027555" data-location-x="50.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>ул. Маршала Говорова, 10/6</p>
-                        <span>Смотреть на карте</span>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
-                <div class="single-loc">
-                    <div class="img">
-                        <img src="./img/loc-cont.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>ул. Пантелеймоновская, 110 / Александровский пр-т "Новый привоз"</p>
-                        <span>Смотреть на карте</span>
-
-                    </div>
-                </div>
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="36.516862739027555" data-location-x="51.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>ул. Маршала Говорова, 10/6</p>
-                        <span>Смотреть на карте</span>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
-                <div class="single-loc">
+                <div class="single-loc" data-location-y="34.216862739027555" data-location-x="51.01218666117535">
                     <div class="img">
                         <img src="./img/loc-cont.jpg" alt="">
                     </div>
                     <div class="text">
-                        <p>ул. Пантелеймоновская, 110 / Александровский пр-т "Новый привоз"</p>
-                        <span>Смотреть на карте</span>
+                        <p>ул. Маршала Говорова, 10/6</p>
+                        <span class="single-mag" >Смотреть на карте</span>
 
                     </div>
                 </div>
+                <div class="single-loc" data-location-y="32.216862739027555" data-location-x="49.01218666117535">
+                    <div class="img">
+                        <img src="./img/loc-cont.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>ул. Маршала Говорова, 10/6</p>
+                        <span class="single-mag" >Смотреть на карте</span>
+
+                    </div>
+                </div>
+                <div class="single-loc" data-location-y="36.216862739027555" data-location-x="50.01218666117535">
+                    <div class="img">
+                        <img src="./img/loc-cont.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>ул. Маршала Говорова, 10/6</p>
+                        <span class="single-mag" >Смотреть на карте</span>
+
+                    </div>
+                </div>
+                <div class="single-loc" data-location-y="36.516862739027555" data-location-x="51.01218666117535">
+                    <div class="img">
+                        <img src="./img/loc-cont.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>ул. Маршала Говорова, 10/6</p>
+                        <span class="single-mag" >Смотреть на карте</span>
+
+                    </div>
+                </div>
+                <div class="single-loc" data-location-y="34.216862739027555" data-location-x="51.01218666117535">
+                    <div class="img">
+                        <img src="./img/loc-cont.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>ул. Маршала Говорова, 10/6</p>
+                        <span class="single-mag" >Смотреть на карте</span>
+
+                    </div>
+                </div>
+                <div class="single-loc" data-location-y="32.216862739027555" data-location-x="49.01218666117535">
+                    <div class="img">
+                        <img src="./img/loc-cont.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>ул. Маршала Говорова, 10/6</p>
+                        <span class="single-mag" >Смотреть на карте</span>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

@@ -2301,6 +2301,47 @@
 }
 
 @media screen and (max-width: 525px) {
+  .product-info__about .text {
+    display: none;
+  }
+  .product-info__footer {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+  }
+  .one-click {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-info__footer .btn {
+    width: 60%;
+    margin-top: 0;
+    padding: 4px;
+    &::after {
+      content: none;
+    }
+  }
+  .product-info__footer .quantity-field {
+    margin-right: 0;
+    width: 40%;
+  }
+  .product-info__tags .rate {
+    width: 100%;
+  }
+  .product-info h2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .product-info__about .unhide-text {
+    display: none;
+  }
+  .prod-about {
+    display: none;
+  }
+  .product .breadcrumbs {
+    display: none;
+  }
   .about-values {
     flex-direction: column;
     align-items: flex-start;
@@ -2433,5 +2474,9 @@
 @media screen and (max-width: 360px) {
   .favs-container .single-card {
     width: 100%;
+  }
+  .product-info__footer .quantity-field {
+    width: 100%;
+    margin-bottom: 12px;
   }
 }
