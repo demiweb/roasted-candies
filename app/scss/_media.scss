@@ -2330,7 +2330,8 @@
     width: 40%;
   }
   .product-info__tags .rate {
-    width: 100%;
+    width: auto;
+    margin-top: -5px;
   }
   .product-info h2 {
     font-size: 18px;
@@ -2397,6 +2398,10 @@
 }
 
 @media screen and (max-width: 374px) {
+  .product-info__tags .rate {
+    width: 100%;
+    margin-top: 12px;
+  }
   .single-card .price p {
     font-size: 13px;
   }
