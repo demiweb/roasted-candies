@@ -1256,22 +1256,28 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
 
 .header-mob__menu-main {
   width: 100%;
-  padding: 27px 9px 0;
+  padding: 0 9px 0;
   box-sizing: border-box;
 
   ul {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #ECECEC;
+    //border-bottom: 1px solid #ECECEC;
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-bottom: 27px;
+
 
     li {
-      width: 100%;
-      margin-bottom: 25px;
+      width: calc(100% + 16px);
+      margin-left: -8px;
+      margin-right: -8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e7e7e7;
+
 
       &:last-child {
         margin-bottom: 0;
@@ -1289,7 +1295,8 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
         font-size: 14px;
         line-height: 1.1;
         color: #353535;
-        padding-left: 27px;
+        padding-left: 0;
+        padding: 8px 0;
         box-sizing: border-box;
 
         img {
@@ -1322,26 +1329,42 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 30px 9px 10px;
+  padding: 0 9px 10px;
   box-sizing: border-box;
-  row-gap: 30px;
+  row-gap: 15px;
   padding-bottom: 190px;
   background: url("../img/bg-mob-hed.png") no-repeat left bottom/ 230px;
 
   .header-phones {
     margin-left: 0;
     width: 50%;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid #e7e7e7;
+    > a {
+      padding: 15px 0;
+      margin-left: -3px;
+    }
   }
 
   .header-time {
     margin-left: 0;
     width: 50%;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid #e7e7e7;
+    > a, > p {
+      padding: 15px 0;
+      justify-content: flex-end;
+    }
+
   }
 
   .header-social {
     width: 50%;
     margin-left: 0;
     margin-right: 0;
+    justify-content: flex-end;
   }
 }
 
@@ -1704,7 +1727,7 @@ main {
     font-size: 18px;
   }
 
-  h2 {
+  h2, h1 {
     font-size: 34px;
   }
 }
@@ -4954,7 +4977,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: flex-start;
   margin-left: 56px;
 
-  h2 {
+  h2, h1 {
     width: 100%;
     font-style: normal;
     font-weight: bold;
