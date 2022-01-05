@@ -211,37 +211,38 @@ function openBtnCatalog() {
                 document.querySelector('.backplate-menu').classList.remove('visible');
             }
         })
-        btnCatalogMenu.forEach((btn2, k) => {
-            btn2.addEventListener('click', (e) => {
 
-                if (window.innerWidth > 1050) {
-
-                } else {
-                    e.preventDefault();
-                    if (btn2.closest('li.menu-item-has-children').classList.contains('active')) {
-
-                        btn2.closest('li.menu-item-has-children').classList.remove('active');
-
-                    } else {
-                        btnCatalogMenu.forEach((btn3) => {
-                            btn3.closest('li.menu-item-has-children').classList.remove('active');
-                        })
-                        btn2.closest('li.menu-item-has-children').classList.add('active');
-                        let parent = btn2.closest('li.menu-item-has-children');
-                        console.log(parent.parentNode.closest('li.menu-item-has-children'));
-                        if (!parent.parentNode.closest('li.menu-item-has-children')) {
-
-                        } else {
-                            parent.parentNode.closest('li.menu-item-has-children').classList.add('active');
-
-                        }
-
-                    }
-                }
-
-
-            })
-        })
+        // btnCatalogMenu.forEach((btn2, k) => {
+        //     btn2.addEventListener('click', (e) => {
+        //
+        //         if (window.innerWidth > 1050) {
+        //
+        //         } else {
+        //             e.preventDefault();
+        //             if (btn2.closest('li.menu-item-has-children').classList.contains('active')) {
+        //
+        //                 btn2.closest('li.menu-item-has-children').classList.remove('active');
+        //
+        //             } else {
+        //                 btnCatalogMenu.forEach((btn3) => {
+        //                     btn3.closest('li.menu-item-has-children').classList.remove('active');
+        //                 })
+        //                 btn2.closest('li.menu-item-has-children').classList.add('active');
+        //                 let parent = btn2.closest('li.menu-item-has-children');
+        //                 console.log(parent.parentNode.closest('li.menu-item-has-children'));
+        //                 if (!parent.parentNode.closest('li.menu-item-has-children')) {
+        //
+        //                 } else {
+        //                     parent.parentNode.closest('li.menu-item-has-children').classList.add('active');
+        //
+        //                 }
+        //
+        //             }
+        //         }
+        //
+        //
+        //     })
+        // })
     }
 }
 
