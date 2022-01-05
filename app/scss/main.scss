@@ -1018,14 +1018,14 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
     }
 
     &:hover {
-      background: #ED452A;
+      background: #c4b697;
       transition: background-color 0.3s ease;
       img {
         transition: filter 0.3s ease;
-        filter: invert(1);
+
       }
       span {
-        background: #C4B697;
+        background: #ed452a;
         transition: background-color 0.3s ease;
 
       }
